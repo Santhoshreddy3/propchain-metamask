@@ -62,8 +62,8 @@ export const WalletModal: React.FC<WalletModalProps> = ({ open, onClose }) => {
               onClick={connect}
               disabled={isConnecting}
             >
-              {/* replace with your own metamask.svg if available */}
-              <img src="/metamask.svg" alt="" width={24} height={24} />
+              {/* Use the icon you placed in your public folder */}
+              <img src="/metamask.svg" alt="MetaMask logo" width={24} height={24} />
               <span>MetaMask</span>
             </button>
             {error && <p className="text-red-600">{error}</p>}
@@ -82,7 +82,8 @@ export const WalletModal: React.FC<WalletModalProps> = ({ open, onClose }) => {
           </div>
         )}
 
-        <div classnName="border-t px-4 py-3 flex justify-end">
+        {/* Footer */}
+        <div className="border-t px-4 py-3 flex justify-end">
           <button
             onClick={onClose}
             className="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300"
